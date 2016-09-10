@@ -12,6 +12,9 @@ def get_movie(name):
     print movie['long imdb canonical title']
     cast = movie['cast']
     for character in cast:
+        actor = ia.get_person(character.personID)
+        time.sleep(1)
+
         print character.personID
 
 #get_movie(sys.argv[1])
